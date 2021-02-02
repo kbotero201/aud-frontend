@@ -58,7 +58,7 @@ import Chart from "chart.js";
 
     return (
       <div>
-        <canvas id="myChart" width="100" height="100" />
+        <canvas id="myChart" width="50" height="50" />
       </div>
     )
 

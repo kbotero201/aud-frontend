@@ -1,35 +1,45 @@
-import React, { useEffect } from 'react';
-import Chart from 'chart.js';
+import React, {useState} from 'react';
+import TestButton from './TestButton.js'
 
 
 
 
 function Test(){
 
-const ctx = document.getElementById("myChart");
+    const [stepValue, setStepValue] = useState(null)
+    const [finalTestValues, setFinalTestValues] = useState([])
+  
+    console.log(stepValue)
+    console.log(finalTestValues)
+
+    function handleNextClick(){
+        setFinalTestValues([...finalTestValues, stepValue ])
+        setStepValue(null)
+    }
 
     return(
         <div>
 
-            <p> Test text</p>
+            <p> Test Buttons</p>
 
             <tr>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-          <td>Button</td>
-      </tr>
+                <TestButton stepValue={stepValue} setStepValue={setStepValue} />
+                <td><button className="soundbutton" >Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+                <td><button className="soundbutton">Play</button></td>
+            </tr>
 
-      <button>Back</button>
-      <button>Next</button>
+      <button onClick={handleNextClick}>Next</button>
+      <button> See Results </button>
 
       
         </div>

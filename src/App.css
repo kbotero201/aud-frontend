@@ -40,3 +40,20 @@
 table, th, td {
   border: 1px solid black;
 }
+
+td { 
+  padding: 10px;
+}
+
+.soundbutton{
+  background-color: blue; 
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
