@@ -4,27 +4,23 @@ import Test from "./Test.js"
 import Graph from "./Graph.js"
 import UserProfile from "./Pages/UserProfile.js"
 import LoginButtons from "./LoginButtons.js"
+import SignUp from "./Pages/SignUp.js"
+import Login from "./Pages/Login.js"
+
 
 function App() {
 
   const [currentUser, setCurrentUser] = useState([])
+  console.log(currentUser.age)
 
-
-  useEffect(()=> {
-    fetch("http://127.0.0.1:3000/api/v1/users/")
-      .then(resp=> resp.json())
-      .then(data => {
-        console.log(data)
-    })
-  },[])
-
- 
   return (
     <div className="App">
       <LoginButtons currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <Test  />
       <Graph />
       <UserProfile />
+      <SignUp />
+      <Login setCurrentUser={setCurrentUser}/>
     </div>
   )
 }
