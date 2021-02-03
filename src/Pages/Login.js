@@ -13,7 +13,7 @@ function Login({setCurrentUser}) {
           .then(resp=> resp.json())
           .then(data => {
             setUsers(data)
-            console.log(data)
+            //console.log(data)
         })
     },[])
 

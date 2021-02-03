@@ -1,17 +1,20 @@
-import React from 'react';
+import React from 'react'
 
-function TestButton({setStepValue}){
+function TestButton({setStepValue, sound}){
 
-    const audio = new Audio("./sounds/hearingTest.online.warble_500_70.ogg")
+    const audio = new Audio(sound.file)
 
     function playSound(){
         audio.play()
-        const value = 10 
+        const value = sound.value
         setStepValue(value)
+        console.log(sound.name)
     }
 
     return(
+        
         <td><button className="soundbutton" onClick={playSound}>Play</button></td>
+
     )
 }
 
