@@ -3,10 +3,11 @@ import React, {useState, useEffect} from 'react';
 import Test from "./Test.js"
 import Graph from "./Graph.js"
 import UserProfile from "./Pages/UserProfile.js"
+import LoginButtons from "./LoginButtons.js"
 
 function App() {
 
-  //const [currentUser, setCurrentUser] = useState([])
+  const [currentUser, setCurrentUser] = useState([])
 
 
   useEffect(()=> {
@@ -20,6 +21,7 @@ function App() {
  
   return (
     <div className="App">
+      <LoginButtons currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <Test  />
       <Graph />
       <UserProfile />
