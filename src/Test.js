@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from "react-router-dom"
 import TestStepContainer from './TestStepContainer.js'
-import Graph from "./Graph.js"
+import Graph from "./Components/Graph.js"
+import ProgressBar from "./ProgressBar.js"
 
 function Test(){
 
@@ -46,6 +47,7 @@ function Test(){
         <div> 
             {showResults? <Graph finalTestValues={finalTestValues}/> : 
                 <div>
+                    <ProgressBar currentStep={currentStep}/>
                     <p> Test Buttons</p>
                     <tr>
                         <TestStepContainer sounds={sounds} setStepValue={setStepValue} />    

@@ -38,9 +38,21 @@ td {
   border-radius: 10px;
 }
 
+.soundbutton img{
+    display: block;
+    height: 30px;  
+}
+
 .flex-container {
   display: flex;
   /*flex-direction: column;*/
   justify-content: center;
 }
+
+progress {
+  width: 300px;
+  height: 30px;
+  value: red; 
+}
+
 
