@@ -11,7 +11,7 @@ import Chart from "chart.js";
       new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['', '250Hz', '500Hz', '1,000Hz', '2,000Hz', '4,000Hz', '8,000Hz', ''],
+            labels: ['', '250 Hz', '500 Hz', '1,000 Hz', '2,000 Hz', '4,000 Hz', '8,000 Hz', ''],
             datasets: [{
                 label: 'Loudness(dB)',
                 lineTension: 0,
@@ -61,9 +61,12 @@ import Chart from "chart.js";
         const date = (myCurrentDate.getMonth()+1) + '/' + myCurrentDate.getDate() + '/' + myCurrentDate.getFullYear()
 
         let newUserTest = {
+            user_id: currentUser.id,
+            test_id: 1,
             result_both: finalTestValues, 
             date: date,
           }
+
 
         fetch("http://127.0.0.1:3000/api/v1/user_tests", {
         method: "POST",
@@ -79,6 +82,7 @@ import Chart from "chart.js";
     }
 
 
+
     return (
       <div>
         <div>
@@ -92,7 +96,6 @@ import Chart from "chart.js";
 
 
   }
-
 
 
   export default Graph

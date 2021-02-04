@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect} from "react"
 //import { Link } from "react-router-dom"
 
 function LoginButtons({currentUser, setCurrentUser}) {
@@ -8,7 +8,7 @@ function LoginButtons({currentUser, setCurrentUser}) {
       fetch("http://localhost:3000/api/v1/users/1")
         .then((r) => r.json())
         .then(r => setCurrentUser(r));
-    }, []);
+    }, [])
   
     // manual login
     function handleLogin() {

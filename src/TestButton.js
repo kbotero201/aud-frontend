@@ -19,7 +19,7 @@ function TestButton({setStepValue, sound}){
     return( 
         <td>
             <button className="soundbutton" onClick={playSound}>
-                { isPlaying? <img src="./Images/earsound.png" /> : <img src="./Images/earnosound.png" /> }
+                { isPlaying? <img src="./Images/earsound.png" alt="ear sound"/> : <img src="./Images/earnosound.png" alt="ear"/> }
             </button>
         </td>
     )
