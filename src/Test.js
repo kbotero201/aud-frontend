@@ -3,7 +3,7 @@ import TestStepContainer from './TestStepContainer.js'
 import Graph from "./Components/Graph.js"
 import ProgressBar from "./ProgressBar.js"
 
-function Test(){
+function Test({currentUser}){
 
     const [currentTest, setCurrentTest] = useState([])
     const [currentStep, setCurrentStep] = useState(1)
@@ -39,25 +39,30 @@ function Test(){
         setShowResults(true)
     }
 
-    if (currentStep === 1){
-        const displayText = <h1>Press the first button to start!</h1>
-        console.log("first step")
-    } else if (currentStep === 2){
-        const displayText = <h1>Keep going :)</h1>
-        console.log("2nd step")
-    } else if (currentStep === 3){
-        const displayText = <h1>Almost there</h1>
+    function displayText(){
+        if (currentStep === 1){
+            return <h1>Press the first button to start!</h1>
+        } else if (currentStep === 2){
+            return <h1>Keep going :)</h1>
+        } else if (currentStep === 3){
+            return <h1>You're halfway there</h1>
+        } else if (currentStep === 4){
+            return <h1>So far so good!</h1>
+        } else if (currentStep === 5){
+            return <h1>Almost there</h1>
+        } else if (currentStep === 6){
+            return <h1>Last step!</h1>
+        }
     }
-
-    console.log("step value:" + stepValue)
-    console.log("final test values:" + finalTestValues)
 
     return(
         <div> 
-            {showResults? <Graph finalTestValues={finalTestValues}/> : 
+            {
+                showResults? <Graph finalTestValues={finalTestValues} currentUser={currentUser}/> : 
+
                 <div>
                     <ProgressBar currentStep={currentStep}/>
-                    <h1>displayText</h1>
+                    <div>{displayText()}</div>
                     <p> Start from left to right. Once you hear a sound, click {lastStep? "see results" : "next"}. </p>        
                     <TestStepContainer sounds={sounds} setStepValue={setStepValue} />    
                     

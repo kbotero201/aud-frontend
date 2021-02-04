@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import Chart from "chart.js";
 
 
- function Graph({finalTestValues}) {
+ function Graph({finalTestValues, currentUser}) {
 
-    console.log("graph values:" + finalTestValues)
 
     useEffect(() => {
       const ctx = document.getElementById("myChart")
@@ -56,10 +55,38 @@ import Chart from "chart.js";
     });
     })
 
+    function handleSaveClick(){
+
+        const myCurrentDate = new Date()
+        const date = (myCurrentDate.getMonth()+1) + '/' + myCurrentDate.getDate() + '/' + myCurrentDate.getFullYear()
+
+        let newUserTest = {
+            result_both: finalTestValues, 
+            date: date,
+          }
+
+        fetch("http://127.0.0.1:3000/api/v1/user_tests", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newUserTest)
+        })
+            .then(resp => resp.json())
+            .then(data => {
+                console.log(data)
+            })
+    }
+
 
     return (
       <div>
-        <canvas id="myChart" width="50" height="50" />
+        <div>
+            <canvas id="myChart" width="50" height="50" />
+        </div>
+        <div>
+            {currentUser? <button onClick={handleSaveClick}> Save </button> : <button> Sign up to save your test! </button>}
+        </div>
       </div>
     )
 

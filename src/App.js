@@ -23,14 +23,14 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-              <Test />
+              <Test currentUser={currentUser}/>
           </Route>
 
           <Route exact path="/result/">
               <Graph  />
           </Route>
 
-          <Route exact path="/users/">
+          <Route exact path="/user/">
             <UserProfile currentUser={currentUser} />
           </Route>
 
