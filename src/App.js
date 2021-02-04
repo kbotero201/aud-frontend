@@ -1,7 +1,6 @@
 import './App.css'
 import React, {useState, useEffect} from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { Link } from "react-router-dom"
 import Test from "./Test.js"
 import Graph from "./Components/Graph.js"
 import UserProfile from "./Pages/UserProfile.js"
@@ -13,7 +12,6 @@ import Login from "./Pages/Login.js"
 function App() {
 
   const [currentUser, setCurrentUser] = useState([])
-
 
   return (
     <div className="App">

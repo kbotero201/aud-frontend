@@ -8,16 +8,11 @@ function TestStepContainer({sounds, setStepValue}){
     })
 
     return(
-
         <div>
-            <h1> test container</h1>
             <tr>
                 {soundsMapped}
-            </tr>
-            
-        </div>
-
-        
+            </tr> 
+        </div>    
     )
 }
 
