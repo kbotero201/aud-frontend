@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import TestStepContainer from './TestStepContainer.js'
-import Graph from "./Components/Graph.js"
-import ProgressBar from "./ProgressBar.js"
+import ProgressBar from "../ProgressBar.js"
+import TestResult from "./TestResult.js"
 
-function Test({currentUser}){
+function Test({currentUser, reloadCurrentUser}){
 
     const [currentTest, setCurrentTest] = useState([])
     const [currentStep, setCurrentStep] = useState(1)
@@ -58,7 +58,7 @@ function Test({currentUser}){
     return(
         <div> 
             {
-                showResults? <Graph finalTestValues={finalTestValues} currentUser={currentUser}/> : 
+                showResults? <TestResult finalTestValues={finalTestValues} currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/> : 
 
                 <div>
                     <ProgressBar currentStep={currentStep}/>

@@ -1,7 +1,7 @@
 import './App.css'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Test from "./Test.js"
+import Test from "./TestComponents/Test.js"
 import Graph from "./Components/Graph.js"
 import UserProfile from "./Pages/UserProfile.js"
 import LoginButtons from "./Components/LoginButtons.js"
@@ -14,6 +14,16 @@ function App() {
 
   const [currentUser, setCurrentUser] = useState([])
 
+
+  function reloadCurrentUser(currentUser) {
+    fetch(`http://127.0.0.1:3000/api/v1/users/${currentUser.id}`)
+        .then((r) => r.json())
+        .then(r => 
+          setCurrentUser(r),
+          )
+  }
+
+
   return (
     <div className="App">
 
@@ -25,7 +35,7 @@ function App() {
         <NavButtons currentUser={currentUser} />
         <Switch>
           <Route exact path="/">
-              <Test currentUser={currentUser}/>
+              <Test currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/>
           </Route>
 
           <Route exact path="/result">
@@ -33,7 +43,7 @@ function App() {
           </Route>
 
           <Route exact path="/profile">
-            <UserProfile currentUser={currentUser} />
+            <UserProfile currentUser={currentUser} reloadCurrentUser={reloadCurrentUser} />
           </Route>
 
           <Route exact path="/login">
