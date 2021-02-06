@@ -25,17 +25,17 @@ function LoginButtons({currentUser, setCurrentUser}) {
 
 
     return (
-      <div className="flex-container">
-        <div>
-          {currentUser ? <button className="navbarbuttons" onClick={handleLogout}></button> : <button className="navbarbuttons" onClick={handleLogin}></button> }
+        <div className="flex-container">
+          <div>
+            {currentUser ? <button  onClick={handleLogout}> Logout </button> : <button onClick={handleLogin}> Login </button> }
 
-        </div>
-        <div>
-          {currentUser ?  null : <button className="navbarbuttons"></button> }
+          </div>
+          <div>
+            {currentUser ?  null : <button > Sign Up </button> }
 
+          </div>
         </div>
-      </div>
-    );
+    )
   }
 
 export default LoginButtons

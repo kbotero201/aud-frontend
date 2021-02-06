@@ -38,6 +38,10 @@ function App() {
       </div>
 
       <div className="Navbar">
+        <p>Nav Links</p>
+      </div>
+
+      <div className="Login">
       <LoginButtons currentUser={currentUser} setCurrentUser={setCurrentUser} />
       </div>
 

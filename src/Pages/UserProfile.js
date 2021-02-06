@@ -31,9 +31,14 @@ function UserProfile({currentUser, reloadCurrentUser}){
 
     return(
         <div>
-            <h1> Profile Page </h1>
-            <h1> Name: {currentUser.name}  </h1>
-            <h1> Age: {currentUser.age}  </h1>
+            <div className="full-width">
+                <div className="full-width1"> <img src="../Images/user.png" alt="User Image" /> </div>
+                <div className="full-width2">
+                    <h1> {currentUser.name}  </h1>
+                    <h2> Age: {currentUser.age}  </h2>
+                </div>
+            </div>
+           
             {testMapped}
             
         </div>

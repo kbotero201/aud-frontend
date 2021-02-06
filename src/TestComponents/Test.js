@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import TestStepContainer from './TestStepContainer.js'
-import ProgressBar from "../ProgressBar.js"
+import ProgressBar from "../Components/ProgressBar.js"
 import TestResult from "./TestResult.js"
 
 function Test({currentUser, reloadCurrentUser}){

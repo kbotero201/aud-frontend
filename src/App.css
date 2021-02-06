@@ -40,7 +40,7 @@ a.current{
   height: 100vh;
   grid-template-areas:
     "Bar Bar Bar"
-    "Logo Navbar Navbar"
+    "Logo Navbar Login"
     "Sidebar-L Main Sidebar-R"
     "Footer Footer Footer";
 }
@@ -157,3 +157,47 @@ progress {
 
 /*----------- TEST PAGE END -----------*/ 
 
+
+.full-width {
+  position: relative;
+  margin: 0 -9999rem;
+  padding: 2rem 9999rem;
+  background: lightgray;
+  color: white;
+  font-size: 1.125rem;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8%;
+}
+
+.full-width1 {
+  /*border: 2px solid red; */
+  flex: 0 0 20%;
+  margin-right: 4%;
+}
+
+ .full-width2{
+  /*border: 2px solid red; */
+  flex: 0 0 80%;
+
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.full-width img {
+  max-width: 90%;
+
+}
+
+/*----------- LOGIN BUTTONS  -----------*/ 
+
+.flex-container {
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+}
+
+/*----------- LOGIN BUTTONS END -----------*/ 
