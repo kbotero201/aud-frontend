@@ -3,7 +3,7 @@ import React from 'react'
 function ProgressBar({currentStep}){
 
     return(
-        <div>
+        <div className="progressdiv">
             <progress value={currentStep} max={6}/>
         </div>
     )

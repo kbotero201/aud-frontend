@@ -56,7 +56,8 @@ function Test({currentUser, reloadCurrentUser}){
     }
 
     return(
-        <div> 
+        <div > 
+            
             {
                 showResults? <TestResult finalTestValues={finalTestValues} currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/> : 
 
@@ -72,6 +73,7 @@ function Test({currentUser, reloadCurrentUser}){
                     }
                 </div> 
             }
+            
         </div>
     )
 }

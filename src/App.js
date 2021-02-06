@@ -26,11 +26,22 @@ function App() {
 
   return (
     <div className="App">
+      <div className="grid-container">
 
-      {currentUser? <h1> Welcome, {currentUser.name} </h1> : <h1> No current user </h1>}
+      
+      <div className="Bar">
+        {currentUser? <small> Welcome, {currentUser.name} </small> : <small> No current user </small>}
+      </div>
+
+      <div className="Logo">
+        <p>Logo</p>
+      </div>
+
+      <div className="Navbar">
       <LoginButtons currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      </div>
 
-    <div>
+    <div className="Main">
       <BrowserRouter>
         <NavButtons currentUser={currentUser} />
         <Switch>
@@ -62,6 +73,11 @@ function App() {
       </BrowserRouter>
       </div>
 
+      <div className="Footer">
+        <h1>Footer</h1>
+      </div>
+
+      </div>
     </div>
   )
 }

@@ -27,15 +27,18 @@ function UserTestCard({test, handleDeletedTest}){
     return(
         <div>
 
-            <div>
-                <div onClick={handleTestClick}>
-                    <h3>{test.date}</h3>
-                    <p>{test.result_both}</p>
-                    <p>{test.id}</p>
+            <div className="testcard">
+                <div className="div1">
+                    <div onClick={handleTestClick}>
+                        <h3>{test.date}</h3>
+                        <p>{test.result_both}</p>
+                        <p>{test.id}</p>
+                    </div>
+                    {showGraph? <div onClick={handleGraphClick}> <Graph finalTestValues={test.result_both} /> </div> : null}
                 </div>
-                {showGraph? <div onClick={handleGraphClick}> <Graph finalTestValues={test.result_both} /> </div> : null}
-                <div onClick={handleDeleteClick}>
-                    <button>Delete</button>
+
+                <div className="div2" onClick={handleDeleteClick}>
+                    <img src="./Images/trash.png" alt="Trash Icon" />
                 </div>
             </div>
 

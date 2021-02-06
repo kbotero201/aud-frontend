@@ -17,13 +17,125 @@
   color: #61dafb;
 }
 
-
 table, th, td {
   border: 1px solid black;
 }
 
 td { 
   padding: 10px;
+}
+
+a.current{
+  text-decoration: overline underline;
+}
+
+/*----------- CSS GRID -----------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.3fr 2.9fr 0.6fr;
+  gap: 0px 0px;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    "Bar Bar Bar"
+    "Logo Navbar Navbar"
+    "Sidebar-L Main Sidebar-R"
+    "Footer Footer Footer";
+}
+
+.Main { grid-area: Main; /*border: 2px solid red;*/ }
+
+.Sidebar-L { grid-area: Sidebar-L; border: 2px solid red; }
+
+.Sidebar-R { grid-area: Sidebar-R; border: 2px solid red; }
+
+.Footer { grid-area: Footer; border: 2px solid red; }
+
+.Bar { grid-area: Bar; border: 2px solid red; }
+
+.Navbar { 
+  grid-area: Navbar; 
+  border: 2px solid red;
+  background-color: blue; 
+}
+
+.Logo { grid-area: Logo; border: 2px solid red; background-color: blue;  }
+
+/*----------- CSS GRID END -----------*/
+
+
+
+
+
+
+
+/*----------- CSS USER TEST CARD -----------*/ 
+
+.testcard {
+  border: 2px solid red; 
+  text-align: left;
+  border: 1px #000 solid;
+  border-radius: 12px;
+  padding: 1rem;
+  width: stretch;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+
+  margin: 1rem 0.5rem;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/*.testcard > * {
+        flex: 2 1 ;
+      }
+*/
+
+.div1 {
+  /*border: 2px solid red; */
+  flex-grow: 1;
+}
+
+ .div2 {
+  /*border: 2px solid red; */
+  width: 50px;
+  background: red;
+  margin-left: 4%;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.div2 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  vertical-align: middle;
+}
+
+/*----------- CSS USER TEST CARD END -----------*/ 
+
+
+
+/*----------- TEST PAGE -----------*/ 
+
+.progressdiv {
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+
+progress {
+  width: 300px;
+  height: 30px;
+  value: red; 
+}
+
+.soundsdiv {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .soundbutton{
@@ -43,19 +155,5 @@ td {
     height: 30px;  
 }
 
-.flex-container {
-  display: flex;
-  /*flex-direction: column;*/
-  justify-content: center;
-}
-
-progress {
-  width: 300px;
-  height: 30px;
-  value: red; 
-}
-
-a.current{
-  text-decoration: overline underline;
-}
+/*----------- TEST PAGE END -----------*/ 
 
