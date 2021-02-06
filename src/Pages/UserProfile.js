@@ -35,6 +35,7 @@ function UserProfile({currentUser, reloadCurrentUser}){
                 <div className="full-width1"> <img src="../Images/user.png" alt="User Image" /> </div>
                 <div className="full-width2">
                     <h1> {currentUser.name}  </h1>
+                    <h1> {process.env.REACT_APP_API_KEY}  </h1>
                     <h2> Age: {currentUser.age}  </h2>
                 </div>
             </div>

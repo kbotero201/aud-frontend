@@ -8,6 +8,7 @@ import LoginButtons from "./Components/LoginButtons.js"
 import SignUp from "./Pages/SignUp.js"
 import Login from "./Pages/Login.js"
 import NavButtons from "./Components/NavButtons.js"
+import AudiologistList from "./Pages/AudiologistList.js"
 
 
 function App() {
@@ -53,8 +54,8 @@ function App() {
               <Test currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/>
           </Route>
 
-          <Route exact path="/result">
-              <Graph  />
+          <Route exact path="/Audiologists">
+              <AudiologistList  />
           </Route>
 
           <Route exact path="/profile">
