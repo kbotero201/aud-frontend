@@ -52,8 +52,8 @@ import Chart from "chart.js";
                 }],
                 yAxes: [{
                     ticks: {
-                        min: 0,
-                        max: 80,
+                        min: -10,
+                        max: 90,
                         stepSize: 10,
                         reverse: true,
                         //beginAtZero: true

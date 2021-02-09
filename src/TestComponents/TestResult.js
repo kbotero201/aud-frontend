@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"
 import Chart from "chart.js";
 import Graph from "../Components/Graph.js"
+import { Link } from "react-router-dom"
+
 
 
  function TestResult ({finalTestValues, currentUser, reloadCurrentUser}) {
@@ -29,10 +31,8 @@ import Graph from "../Components/Graph.js"
             .then(resp => resp.json())
             .then(
                 //console.log(data)
-                //reloadCurrentUser(currentUser)
+                reloadCurrentUser(currentUser)
             )
-
-        
     }
 
 
@@ -42,7 +42,9 @@ import Graph from "../Components/Graph.js"
             <Graph finalTestValues={finalTestValues} />
         </div>
         <div>
-            {currentUser? <button onClick={handleSaveClick}> Save </button> : <button> Sign up to save your test! </button>}
+            {currentUser? <Link to= {"/profile"}> <button onClick={handleSaveClick}> Save </button> </Link> : 
+                          <Link to= {"/sign-up"}> <button> Sign up to save your test! </button> </Link>
+            }
         </div>
       </div>
     )
