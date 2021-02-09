@@ -13,7 +13,7 @@ function TestButton({setStepValue, sound}){
         setTimeout(() => {
             setIsPlaying(false)
         }, 3000)
-        //console.log(sound.name)
+        console.log(sound.name)
     }
 
     return( 
@@ -21,6 +21,7 @@ function TestButton({setStepValue, sound}){
             <button className="soundbutton" onClick={playSound}>
                 { isPlaying? <img src="./Images/earsound.png" alt="ear sound"/> : <img src="./Images/earnosound.png" alt="ear"/> }
             </button>
+            <small> {sound.name} </small>
         </td>
     )
 }

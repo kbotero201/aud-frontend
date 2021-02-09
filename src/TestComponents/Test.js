@@ -41,17 +41,17 @@ function Test({currentUser, reloadCurrentUser}){
 
     function displayText(){
         if (currentStep === 1){
-            return <h1>Press the first button to start!</h1>
+            return <React.Fragment> <h1>Press the first button to start!</h1> <strong> Level: 250 Hz </strong> </React.Fragment>
         } else if (currentStep === 2){
-            return <h1>Keep going :)</h1>
+            return <React.Fragment> <h1>Keep going :)</h1> <strong> Level: 500 Hz </strong> </React.Fragment>
         } else if (currentStep === 3){
-            return <h1>You're halfway there</h1>
+            return <React.Fragment> <h1>You're halfway there</h1> <strong> Level: 1000 Hz </strong> </React.Fragment>
         } else if (currentStep === 4){
-            return <h1>So far so good!</h1>
+            return <React.Fragment> <h1>So far so good!</h1> <strong> Level: 2000 Hz </strong> </React.Fragment>
         } else if (currentStep === 5){
-            return <h1>Almost there</h1>
+            return <React.Fragment> <h1>Almost there</h1> <strong> Level: 4000 Hz </strong> </React.Fragment>
         } else if (currentStep === 6){
-            return <h1>Last step!</h1>
+            return <React.Fragment> <h1>Last step!</h1> <strong> Level: 8000 Hz </strong> </React.Fragment>
         }
     }
 
