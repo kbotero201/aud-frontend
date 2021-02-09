@@ -4,18 +4,17 @@ import React, {useEffect} from "react"
 function LoginButtons({currentUser, setCurrentUser}) {
 
     // auto-login
-    useEffect(() => {
-      fetch("http://localhost:3000/api/v1/users/1")
-        .then((r) => r.json())
-        .then(r => setCurrentUser(r));
-    }, [])
+    //useEffect(() => {
+    //  fetch("http://localhost:3000/api/v1/users/1")
+    //    .then((r) => r.json())
+    //    .then(r => setCurrentUser(r));
+    //}, [])
   
     // manual login
     function handleLogin() {
-      console.log("Hi, moving away from autologin")
-      // fetch("http://localhost:3000/autologin")
-      //   .then((r) => r.json())
-      //   .then(setCurrentUser);
+      fetch("http://localhost:3000/autologin")
+         .then((r) => r.json())
+         .then(setCurrentUser);
     }
   
     // manual logout
