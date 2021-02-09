@@ -7,15 +7,17 @@ import Chart from "chart.js";
     
     const max = Math.max(...finalTestValues)
     let resultText 
-    if (max > 20){
+    if (max < 20){
         resultText= <h3> Great Job! Your hearing is within normal range. </h3>
     } else {
         resultText= <h3> You may have signs of hearing loss. Send your test results to an Audiologist for review. </h3>
     }
 
 
+
     useEffect(() => {
-      const ctx = document.getElementById("myChart")
+
+      const ctx = document.getElementById("myChart").getContext('2d')
       const xlabels = [null, finalTestValues[0],finalTestValues[1],finalTestValues[2],finalTestValues[3],finalTestValues[4],finalTestValues[5]]
       new Chart(ctx, {
         type: 'line',
@@ -59,10 +61,14 @@ import Chart from "chart.js";
                         //beginAtZero: true
                     }
                 }]
-            }
+            },
+            animation: {
+                onComplete: "hello" }
         }
     })
+   
     })
+
 
 
     return (
@@ -70,6 +76,9 @@ import Chart from "chart.js";
         <div>
             {resultText }
             <canvas id="myChart" width="50" height="50" />
+            <button id='link' download='filename.png'>Save as Image</button>
+
+
         </div>
       </div>
     )
