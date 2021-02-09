@@ -4,6 +4,15 @@ import Chart from "chart.js";
 
  function Graph({finalTestValues}) {
 
+    
+    const max = Math.max(...finalTestValues)
+    let resultText 
+    if (max > 20){
+        resultText= <h3> Great Job! Your hearing is within normal range. </h3>
+    } else {
+        resultText= <h3> You may have signs of hearing loss. Send your test results to an Audiologist for review. </h3>
+    }
+
 
     useEffect(() => {
       const ctx = document.getElementById("myChart")
@@ -52,13 +61,14 @@ import Chart from "chart.js";
                 }]
             }
         }
-    });
+    })
     })
 
 
     return (
       <div>
         <div>
+            {resultText }
             <canvas id="myChart" width="50" height="50" />
         </div>
       </div>

@@ -30,7 +30,7 @@ function SignUp(){
       })
         .then(resp => resp.json())
         .then(data => {
-            //console.log(data)
+            console.log(data)
         })
   }
 

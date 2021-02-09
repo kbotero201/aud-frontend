@@ -13,7 +13,7 @@ import AudiologistList from "./Pages/AudiologistList.js"
 
 function App() {
 
-  const [currentUser, setCurrentUser] = useState([])
+  const [currentUser, setCurrentUser] = useState(null)
 
 
   function reloadCurrentUser(currentUser) {
