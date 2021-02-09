@@ -34,7 +34,7 @@ function UserTestCard({test, handleDeletedTest}){
                         {/*<p>{test.result_both}</p>*/}
                         <p>Test #{test.id}</p>
                     </div>
-                    {showGraph? <div /*onClick={handleGraphClick}*/> <Graph finalTestValues={test.result_both} /> </div> : null}
+                    {showGraph? <div onClick={handleGraphClick}> <Graph finalTestValues={test.result_both} /> </div> : null}
                 </div>
 
                 <div className="div2" onClick={handleDeleteClick}>
