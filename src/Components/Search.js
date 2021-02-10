@@ -20,6 +20,7 @@ function Search({setLocationSearch}){
                 I am looking for Audiologists near
             </label>
             <input 
+                className="search-input"
                 type = 'text'
                 id = 'location'
                 placeholder = 'address, neighbourhood, city, province or postal code'
