@@ -9,6 +9,7 @@ import SignUp from "./Pages/SignUp.js"
 import Login from "./Pages/Login.js"
 import NavButtons from "./Components/NavButtons.js"
 import AudiologistList from "./Pages/AudiologistList.js"
+import StartTest from "./Pages/StartTest/Main.js"
 
 
 function App() {
@@ -51,6 +52,10 @@ function App() {
         <NavButtons currentUser={currentUser} />
         <Switch>
           <Route exact path="/">
+              <StartTest currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/>
+          </Route>
+
+          <Route exact path="/test">
               <Test currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/>
           </Route>
 

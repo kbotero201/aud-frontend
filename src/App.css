@@ -234,6 +234,7 @@ html, body {
 
 .ratings {
   width:150px;
+  margin-right: 14px;
 }
 
 .cover-photo {
@@ -241,6 +242,7 @@ html, body {
   width:  250px;
   height: 250px;
   object-fit: cover;
+  margin-right: 30px;
 }
 
 .search-input {
@@ -251,4 +253,7 @@ html, body {
   margin-right: 8px;
   width: 40%;
 }
+
 /*----------- AUDIOLOGIST CARD END -----------*/ 
+
+
