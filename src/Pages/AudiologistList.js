@@ -7,7 +7,7 @@ import Search from "../Components/Search.js"
 function AudiologistList(){
 
     const [list, setList]= useState([])
-    const [locationSearch, setLocationSearch] = useState("Alabama")
+    const [locationSearch, setLocationSearch] = useState("")
 
     useEffect(()=> {
         const initialLocation = "New York"
@@ -29,13 +29,8 @@ function AudiologistList(){
             })
             .then((res) => {
                 //console.log(res.data.businesses)
-                //change the state of App to reflect on the result we are given from the API
                 //at the same time, setting the loading state to false 
                 setList(res.data.businesses)
-            })
-            .catch((err) => {
-                //fire the errorState message if there is no information return from the API
-                console.log("ERROR")
             })
     }
 

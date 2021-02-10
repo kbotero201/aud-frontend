@@ -202,3 +202,44 @@ html, body {
 }
 
 /*----------- LOGIN BUTTONS END -----------*/ 
+
+
+
+
+/*----------- AUDIOLOGIST CARD -----------*/ 
+
+.audiocard {
+    border: 2px solid red; 
+    text-align: left;
+    border: 1px #000 solid;
+    border-radius: 12px;
+    padding: 1rem;
+    width: stretch;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  
+    margin: 1rem 0.5rem;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/*.audiocard img {
+  width:100px;
+}*/
+
+.yelp-logo {
+  width:80px;
+}
+
+.ratings {
+  width:150px;
+}
+
+.cover-photo {
+  float: left;
+  width:  250px;
+  height: 250px;
+  object-fit: cover;
+}
+/*----------- AUDIOLOGIST CARD END -----------*/ 
