@@ -1,5 +1,5 @@
 import React, {useEffect} from "react"
-//import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function LoginButtons({currentUser, setCurrentUser}) {
 
@@ -26,11 +26,16 @@ function LoginButtons({currentUser, setCurrentUser}) {
     return (
         <div className="flex-container">
           <div>
-            {currentUser ? <button  onClick={handleLogout}> Logout </button> : <button onClick={handleLogin}> Login </button> }
-
+            {currentUser ? 
+              <Link to={"./"}> <button onClick={handleLogout}> Logout </button> </Link> : 
+              <React.Fragment> 
+                <Link to={"./"}> <button onClick={handleLogin}> Demo </button> </Link>
+                <Link to={"./login"}> <button > Login </button> </Link>
+              </React.Fragment> 
+            }
           </div>
           <div>
-            {currentUser ?  null : <button > Sign Up </button> }
+            {currentUser ?  null : <Link to={"./sign-up"}><button > Sign Up </button></Link> }
 
           </div>
         </div>

@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import UserTestCard from "../Components/UserTestCard.js"
+import { Link } from "react-router-dom"
+
 
 function UserProfile({currentUser, reloadCurrentUser}){
 

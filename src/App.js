@@ -28,6 +28,7 @@ function App() {
 
   return (
     <div className="App">
+      <BrowserRouter>
       <div className="grid-container">
 
       
@@ -40,7 +41,7 @@ function App() {
       </div>
 
       <div className="Navbar">
-        <p>Nav Links</p>
+        <NavButtons currentUser={currentUser} />
       </div>
 
       <div className="Login">
@@ -48,8 +49,6 @@ function App() {
       </div>
 
     <div className="Main">
-      <BrowserRouter>
-        <NavButtons currentUser={currentUser} />
         <Switch>
           <Route exact path="/">
               <StartTest currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/>
@@ -80,7 +79,6 @@ function App() {
           </Route>
           
         </Switch>
-      </BrowserRouter>
       </div>
 
       <div className="Footer">
@@ -88,6 +86,7 @@ function App() {
       </div>
 
       </div>
+      </BrowserRouter>
     </div>
   )
 }
