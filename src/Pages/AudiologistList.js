@@ -2,12 +2,14 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import AudiologistCard from "../Components/AudiologistCard.js"
 import Search from "../Components/Search.js"
+import Loading from "../Components/Loading.js"
 
 
 function AudiologistList(){
 
     const [list, setList]= useState([])
     const [locationSearch, setLocationSearch] = useState("")
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(()=> {
         const initialLocation = "New York"
@@ -19,6 +21,7 @@ function AudiologistList(){
     },[locationSearch])
 
     function fetchAudiologists(location){
+        setIsLoading(true)
         axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
             headers: {
                 Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
@@ -31,6 +34,7 @@ function AudiologistList(){
                 //console.log(res.data.businesses)
                 //at the same time, setting the loading state to false 
                 setList(res.data.businesses)
+                setIsLoading(false)
             })
     }
 
@@ -43,7 +47,7 @@ function AudiologistList(){
     return(
         <div>
             <Search setLocationSearch={setLocationSearch} />
-            {listMapped}
+            {isLoading? <Loading /> : <div>{listMapped}</div> }
         </div>
     )
 }
