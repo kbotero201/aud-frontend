@@ -68,8 +68,8 @@ function Test({currentUser, reloadCurrentUser}){
                     <TestStepContainer sounds={sounds} setStepValue={setStepValue} />    
                     
                     {lastStep? 
-                        <button disabled={stepValue === null} onClick={handleResultsClick}> See Results </button> : 
-                        <button disabled={stepValue === null} onClick={handleNextClick}> Next </button>
+                        <button className="large-button" disabled={stepValue === null} onClick={handleResultsClick}> See Results </button> : 
+                        <button className="large-button" disabled={stepValue === null} onClick={handleNextClick}> Next </button>
                     }
                 </div> 
             }

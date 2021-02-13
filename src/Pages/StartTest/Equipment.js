@@ -1,31 +1,47 @@
-import React from 'react'
+import React, {useState} from 'react'
+import EquipmentCard from "./EquipmentCard.js"
 
 function Equipment({setStartStep}){
+
+    const equipmentData = [
+        {
+            title: "Over Ear Headphones",
+            suggestion: "(reccomended)",
+            image: "./Images/test.jpg",
+            moreList: ["Bluetooth", "Wired"]
+        },
+        {
+            title: "Bud Earphones",
+            suggestion: "(acceptable)",
+            image: "./Images/test.jpg",
+            moreList: ["Bluetooth", "Wired"]
+        },
+        {
+            title: "Computer Audio",
+            suggestion: "(not suggested)",
+            image: "./Images/test.jpg",
+            moreList: ["External Audio", "Computer Audio"]
+        }
+    ]
+
+    const equipmentList = equipmentData.map((card) => (
+        <EquipmentCard data={card} />
+    ))
+
 
     function handleNextClick(){
         setStartStep(2)
     }
+
     
     return(
         <div>
 
-            <h1>Let's make sure you have the right equipment</h1>
-
-            <div>
-                <div>
-                    <img src="./Images/yelp_logo.png" className="yelp-logo"></img>
-                    <h3>(reccomended)</h3>
-                </div>
-                <div>
-                    <img src="./Images/yelp_logo.png" className="yelp-logo"></img>
-                    <h3>(acceptable)</h3>
-                </div>
-                <div>
-                    <img src="./Images/yelp_logo.png" className="yelp-logo"></img>
-                    <h3>(do not use)</h3>
-                </div>
+            <h1 className="header">Let's make sure you have the right equipment</h1>
+            <div className="equipment-flex" >
+                {equipmentList}
             </div>
-            <button onClick={handleNextClick}> I'm ready! </button>
+            <button className="large-button" onClick={handleNextClick}> Next </button>
 
         </div>
     )

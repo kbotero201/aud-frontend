@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Rubik', sans-serif;
 }
 
 .App-header {
@@ -22,8 +23,59 @@ td {
   padding: 10px;
 }
 
+button {
+  outline: none;
+}
+
+.header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* FOR TEST */
+.large-button {
+  background-color:#49516F;
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.large-button:disabled {
+  background-color:lightgray;
+}
+
+.large-button:hover:enabled {
+  background-color: #6279B8;
+}
+
+.alt-large-button {
+  background-color: white;
+  border: none;
+  color: #49516F;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 2px solid #8ed1dc; 
+  cursor: pointer;
+}
+
 .nav-buttons a {
-  background-color: blue; 
+  background-color: #8ed1dc; 
   border: none;
   color: white;
   padding: 10px 10px;
@@ -38,12 +90,12 @@ td {
 
 .nav-buttons a:hover {
   background-color: white; 
-  color: blue;
+  color: black;
 }
 
 .nav-buttons a.current {
   background-color: white; 
-  color: blue;
+  color: black;
 }
 
 /*----------- CSS GRID -----------*/
@@ -51,7 +103,7 @@ td {
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr 2.5fr 0.5fr;
-  grid-template-rows: 0.2fr 0.3fr 2.9fr 0.6fr;
+  grid-template-rows: 0.2fr 0.4fr 2.9fr 0.6fr;
   gap: 0px 0px;
   width: 100vw;
   height: 100vh;
@@ -64,21 +116,22 @@ td {
 
 .Main { grid-area: Main; /*border: 2px solid red;*/ }
 
-.Sidebar-L { grid-area: Sidebar-L; border: 2px solid red; }
+.Sidebar-L { grid-area: Sidebar-L;  }
 
-.Sidebar-R { grid-area: Sidebar-R; border: 2px solid red; }
+.Sidebar-R { grid-area: Sidebar-R;  }
 
 .Footer { grid-area: Footer; border: 2px solid red; }
 
-.Bar { grid-area: Bar; border: 2px solid red; }
+.Bar { grid-area: Bar;  background-color: #8ed1dc; }
 
 .Navbar { 
   grid-area: Navbar; 
-  border: 2px solid red;
-  background-color: blue; 
+  background-color: #8ed1dc;
 }
 
-.Logo { grid-area: Logo; border: 2px solid red; background-color: blue;  }
+.Logo { grid-area: Logo;  background-color: #8ed1dc;  }
+
+.Login { grid-area: Login;  background-color: #8ed1dc;  }
 
 /*----------- CSS GRID END -----------*/
 
@@ -140,8 +193,8 @@ td {
 /*----------- TEST PAGE -----------*/ 
 
 .progressdiv {
-  margin-top: 5%;
-  margin-bottom: 8%;
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 progress {
@@ -156,7 +209,7 @@ progress {
 }
 
 .soundbutton{
-  background-color: blue; 
+  background-color: #6279B8; 
   border: none;
   color: white;
   padding: 20px 20px;
@@ -312,3 +365,73 @@ html, body {
 }
 
 /*----------- LOADING SPINNER END -----------*/ 
+
+
+/*----------- EQUIPMENT PAGE -----------*/ 
+
+
+.equipment-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.equipment-flex div {
+  /*border: 2px solid red; */
+}
+
+.equipment-item {
+  margin-left: 20px;
+  margin-right: 20px;
+  width:250px;
+  min-height: 300px;
+  border-radius: 10px;
+  border: 1px solid #8ed1dc;
+}
+
+.equipment-item:hover {
+  border: 2px solid #6279B8;
+}
+
+.equipment-item img {
+  width:250px;
+  border-radius: 10px;
+}
+
+/*----------- EQUIPMENT PAGE END -----------*/ 
+
+
+/*----------- CALIBRATION PAGE -----------*/ 
+
+.step-card {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  min-height: 140px;
+  border-radius: 10px;
+  border: 1px solid #8ed1dc;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.step-card img{
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+.step-div {
+  background-color: #6279B8;
+  min-width: 90px;
+  border-radius: 10px;
+  padding: 70px 0;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/*----------- CALIBRATION PAGE END -----------*/ 

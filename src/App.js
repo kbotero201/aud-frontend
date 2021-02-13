@@ -30,7 +30,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <div className="grid-container">
-
       
       <div className="Bar">
         {currentUser? <small> Welcome, {currentUser.name} </small> : <small> No current user </small>}

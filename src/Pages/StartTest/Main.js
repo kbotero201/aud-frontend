@@ -11,6 +11,12 @@ function StartTest(){
             return <Equipment setStartStep={setStartStep} />
         } else if (startStep === 2){
             return <Calibration setStartStep={setStartStep} />
+        } else if (startStep === 3){
+            return  <React.Fragment> 
+                        <h1>Start Your Hearing Test</h1>
+                        <p>The quick & easy way to test your hearing</p>
+                        <button> Start </button>
+                    </React.Fragment>
         } 
         //add more set-up steps if needed
     }
