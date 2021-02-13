@@ -143,10 +143,81 @@ button {
 
 
 
+/*----------- CSS USER PROFILE PAGE -----------*/ 
+
+.container{
+  margin: 50px auto 50px;
+  width: auto; 
+  height: 380px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubbles{
+  height: 140px;
+  background: #8ed1dc;
+}
+
+.bubbles img {
+  max-height: 96px;
+  max-width: 96px;
+}
+
+.photo{
+  position:absolute;
+  top: 87px; 
+  left: 45%;
+  border: 5px solid white;
+  border-radius: 50%;
+  height: 96px;
+  overflow: hidden;
+}
+
+.maindiv{
+  height: 150px;
+  background-color: white;
+  text-align: center;
+  padding-top: 75px;
+  box-sizing: border-box;
+}
+
+.name{
+  font-weight: 700;
+  font-size: 1.3em;
+  color: var(--Verydarkdesaturatedblue);
+}
+
+.statscontainer{
+  background-color: white;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid hsl(0, 0%, 90%);
+  margin-top: 30px;
+}
+
+.statistics {
+ text-align: center;
+}
+
+.quantity {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: var(--Verydarkdesaturatedblue);
+}
+
+.units {
+  font-weight: 400;
+  font-size: 0.8em;
+  color: var(--Darkgray);
+  letter-spacing: 2px;
+}
 
 
-
-/*----------- CSS USER TEST CARD -----------*/ 
+/* TEST CARD*/ 
 
 .testcard {
   text-align: left;
@@ -186,7 +257,8 @@ button {
   vertical-align: middle;
 }
 
-/*----------- CSS USER TEST CARD END -----------*/ 
+
+/*----------- USER PROFILE PAGE END -----------*/ 
 
 
 
@@ -299,24 +371,19 @@ html, body {
 /*----------- AUDIOLOGIST CARD -----------*/ 
 
 .audiocard {
-    border: 2px solid red; 
     text-align: left;
-    border: 1px #000 solid;
+    border: 1px solid #8ed1dc;
     border-radius: 12px;
     padding: 1rem;
     width: stretch;
     height: auto;
     display: flex;
     flex-direction: row;
-  
     margin: 1rem 0.5rem;
     background-color: #ffffff;
     cursor: pointer;
 }
 
-/*.audiocard img {
-  width:100px;
-}*/
 
 .yelp-logo {
   width:80px;
@@ -333,7 +400,10 @@ html, body {
   height: 250px;
   object-fit: cover;
   margin-right: 30px;
+  border: 5px solid white;
+  border-radius: 12px;
 }
+
 
 .search-input {
   background: transparent;
@@ -350,7 +420,7 @@ html, body {
 
 .search {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 /*----------- AUDIOLOGIST CARD END -----------*/ 
@@ -363,6 +433,7 @@ html, body {
   position: relative;
   width: 80px;
   height: 80px;
+  margin-top: 100px;
 }
 .loading-ring div {
   box-sizing: border-box;
@@ -508,75 +579,12 @@ html, body {
 
 
 
-.container{
-  margin: 50px auto 50px;
-  width: auto; 
-  height: 380px;
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-}
 
-.bubbles{
-  height: 140px;
-  background: #8ed1dc;
-}
 
-.bubbles img {
-  max-height: 96px;
-  max-width: 96px;
-}
 
-.photo{
-  position:absolute;
-  top: 87px; 
-  left: 45%;
-  border: 5px solid white;
-  border-radius: 50%;
-  height: 96px;
-  overflow: hidden;
-}
-
-.maindiv{
-  height: 150px;
-  background-color: white;
-  text-align: center;
-  padding-top: 75px;
-  box-sizing: border-box;
-}
-
-.name{
-  font-weight: 700;
-  font-size: 1.3em;
-  color: var(--Verydarkdesaturatedblue);
-}
-
-.statscontainer{
-  background-color: white;
-  height: 90px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-top: 1px solid hsl(0, 0%, 90%);
-  margin-top: 30px;
-}
-
-.statistics {
- text-align: center;
-}
-
-.quantity {
-  font-weight: 700;
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: var(--Verydarkdesaturatedblue);
-}
-
-.units {
-  font-weight: 400;
-  font-size: 0.8em;
-  color: var(--Darkgray);
-  letter-spacing: 2px;
+.icon {
+  max-width: 25px;
+  margin-right: 10px;
 }
 
 

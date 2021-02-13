@@ -8,9 +8,9 @@ import Chart from "chart.js";
     const max = Math.max(...finalTestValues)
     let resultText 
     if (max < 20){
-        resultText= <h3> Great Job! Your hearing is within normal range. </h3>
+        resultText= <h3> <img className="icon" src="../Images/tick.png" alt="Checkmark" /> Great Job! Your hearing is within normal range. </h3>
     } else {
-        resultText= <h3> You may have signs of hearing loss. Send your test results to an Audiologist for review. </h3>
+        resultText= <h3>  <img className="icon" src="../Images/warning.png" alt="Warning" />You may have signs of hearing loss. Send your test results to an Audiologist for review. </h3>
     }
 
 
@@ -74,9 +74,9 @@ import Chart from "chart.js";
     return (
       <div>
         <div>
-            {resultText }
+            { resultText }
             <canvas id="myChart" width="50" height="50" />
-            <button id='link' download='filename.png'>Save as Image</button>
+            <button id='link' download='filename.png'> Save as Image </button>
 
 
         </div>

@@ -6,8 +6,6 @@ import { Link } from "react-router-dom"
 function UserProfile({currentUser, reloadCurrentUser}){
 
     const [testList, setTestList] = useState(currentUser.user_tests)
-
-    console.log(testList)
    
     let testMapped 
     if (testList){
@@ -46,7 +44,7 @@ function UserProfile({currentUser, reloadCurrentUser}){
                             <div className="units"> Age </div>
                         </div>
                         <div className="statistics">
-                            <div className="quantity"> 20 </div>
+                            <div className="quantity"> {testList.length} </div>
                             <div className="units"> Tests </div>
                         </div>     
                     </div>

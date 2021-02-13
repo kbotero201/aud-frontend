@@ -29,13 +29,21 @@ function UserTestCard({test, handleDeletedTest}){
 
             <div className="testcard">
                 <div className="div1">
-                    <button><a href="mailto: ?subject=Please Take a Look At My Audiogram.&body=Here is my Hearing Test Audiogram I took on Audzi. Would you please take a look?"> Email My Result </a></button>
                     <div onClick={handleTestClick}>
                         <h3>{test.date}</h3>
                         {/*<p>{test.result_both}</p>*/}
                         <p>Test #{test.id}</p>
                     </div>
-                    {showGraph? <div onClick={handleGraphClick}> <Graph finalTestValues={test.result_both} /> </div> : null}
+                    {showGraph? 
+                        <React.Fragment>
+                            <div>
+                                <button><a href="mailto: ?subject=Please Take a Look At My Audiogram.&body=Here is my Hearing Test Audiogram I took on Audzi. Would you please take a look?"> Email My Result </a></button>
+                                <button id='link' download='filename.png'> Download </button>
+                            </div>
+                            <div onClick={handleGraphClick}> <Graph finalTestValues={test.result_both} /> </div>
+                        </React.Fragment> 
+                        : null
+                    }
                 </div>
                 <div className="div2" onClick={handleDeleteClick}>
                     <img src="./Images/trash.png" alt="Trash Icon" />
