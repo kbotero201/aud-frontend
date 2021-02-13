@@ -26,8 +26,8 @@ function Calibration({setStartStep}){
     return(
         <div>
             <div >
-                <h1 className="header">Let's calibrate your headphones</h1>
-                <div className="step-card">
+                <h1 className="header"> Let's Calibrate Your Headphones </h1>
+                <div className={isPlaying? "step-card-blink" : "step-card"}>
                     <div><img src={"./Images/first.2.png"} alt="First" /> </div>
                     <div>
                         <p>Using headphones, listen to the calibration audio file. Then, without your headphones on, rub your hands together closely in front of your nose, quickly and firmly, and try producing the same sound.</p>

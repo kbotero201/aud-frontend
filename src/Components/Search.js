@@ -10,26 +10,24 @@ function Search({setLocationSearch}){
     }
 
     return(
-        <div>
-        
-        <form onSubmit={handleSubmit}>
-            <label 
-                htmlFor = 'location'
-                arialabel = 'enter address, neighbourhood, city, province or postal code'
-                className = 'searchForm__label'> 
-                I am looking for Audiologists near
-            </label>
-            <input 
-                className="search-input"
-                type = 'text'
-                id = 'location'
-                placeholder = 'address, neighbourhood, city, province or postal code'
-                value = {search}
-                onChange = {(evt) => setSearch(evt.target.value)} >
-            </input>
-            <button type = 'submit'> Search </button>
-        </form>
-        
+        <div className="search">
+            <form onSubmit={handleSubmit}>
+                <label 
+                    htmlFor = 'location'
+                    arialabel = 'enter address, neighbourhood, city, province or postal code'
+                    className = 'searchForm__label'> 
+                    <span className="name"> I am looking for an Audiologists near </span>
+                </label>
+                <input 
+                    className="search-input"
+                    type = 'text'
+                    id = 'location'
+                    placeholder = 'address, neighbourhood, city, province or postal code'
+                    value = {search}
+                    onChange = {(evt) => setSearch(evt.target.value)} >
+                </input>
+                <button type = 'submit'> Search </button>
+            </form>
         </div>
     )
 }

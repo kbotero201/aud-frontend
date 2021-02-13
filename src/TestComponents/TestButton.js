@@ -18,7 +18,7 @@ function TestButton({setStepValue, sound}){
 
     return( 
         <td>
-            <button className="soundbutton" onClick={playSound}>
+            <button className= {isPlaying? "soundbuttonblink" :"soundbutton"} onClick={playSound}>
                 { isPlaying? <img className="ld ld-surprise" src="./Images/earsound.png" alt="ear sound"/> : <img src="./Images/earnosound.png" alt="ear"/> }
             </button>
             <small> {sound.name} </small>

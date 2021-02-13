@@ -81,7 +81,7 @@ function App() {
       </div>
 
       <div className="Footer">
-        <h1>Footer</h1>
+        <small>Made by Kevin Botero</small>
       </div>
 
       </div>

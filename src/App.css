@@ -51,6 +51,7 @@ button {
 
 .large-button:disabled {
   background-color:lightgray;
+  cursor: default;
 }
 
 .large-button:hover:enabled {
@@ -120,7 +121,11 @@ button {
 
 .Sidebar-R { grid-area: Sidebar-R;  }
 
-.Footer { grid-area: Footer; border: 2px solid red; }
+.Footer { 
+  grid-area: Footer; 
+  margin-top: 100px;
+  background-color: #49516F;
+}
 
 .Bar { grid-area: Bar;  background-color: #8ed1dc; }
 
@@ -144,9 +149,8 @@ button {
 /*----------- CSS USER TEST CARD -----------*/ 
 
 .testcard {
-  border: 2px solid red; 
   text-align: left;
-  border: 1px #000 solid;
+  border: 1px solid #8ed1dc;
   border-radius: 12px;
   padding: 1rem;
   width: stretch;
@@ -159,10 +163,6 @@ button {
   cursor: pointer;
 }
 
-/*.testcard > * {
-        flex: 2 1 ;
-      }
-*/
 
 .div1 {
   /*border: 2px solid red; */
@@ -209,7 +209,7 @@ progress {
 }
 
 .soundbutton{
-  background-color: #6279B8; 
+  background-color: #8ed1dc; 
   border: none;
   color: white;
   padding: 20px 20px;
@@ -225,10 +225,29 @@ progress {
     height: 30px;  
 }
 
+.soundbuttonblink {
+  background-color: #8ed1dc; 
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #6279B8;
+  -webkit-animation: border-blink 1s step-end infinite;    
+  animation: border-blink 1s step-end infinite; 
+}
+
+.soundbuttonblink img{
+  display: block;
+  height: 30px;  
+}
+
 /*----------- TEST PAGE END -----------*/ 
 
 
-.full-width {
+/*.full-width {
   position: relative;
   margin: 0 -9999rem;
   padding: 2rem 9999rem;
@@ -242,16 +261,17 @@ progress {
 }
 
 .full-width1 {
-  /*border: 2px solid red; */
+  border: 2px solid red; 
   flex: 0 0 20%;
   margin-right: 4%;
 }
 
  .full-width2{
-  /*border: 2px solid red; */
+  border: 2px solid red; 
   flex: 0 0 80%;
 
 }
+
 
 html, body {
   overflow-x: hidden;
@@ -261,6 +281,7 @@ html, body {
   max-width: 90%;
 
 }
+*/
 
 /*----------- LOGIN BUTTONS  -----------*/ 
 
@@ -317,10 +338,19 @@ html, body {
 .search-input {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 3px solid #49516F;
   margin-left: 8px;
   margin-right: 8px;
   width: 40%;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search {
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 /*----------- AUDIOLOGIST CARD END -----------*/ 
@@ -344,7 +374,7 @@ html, body {
   border: 8px solid black;
   border-radius: 50%;
   animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: black transparent transparent transparent;
+  border-color: #8ed1dc transparent transparent transparent;
 }
 .loading-ring div:nth-child(1) {
   animation-delay: -0.45s;
@@ -377,9 +407,6 @@ html, body {
   margin-bottom: 10px;
 }
 
-.equipment-flex div {
-  /*border: 2px solid red; */
-}
 
 .equipment-item {
   margin-left: 20px;
@@ -434,4 +461,122 @@ html, body {
   font-weight: 900;
 }
 
+.step-card-blink {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  min-height: 140px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  -webkit-animation: border-blink 1s step-end infinite;    
+  animation: border-blink 1s step-end infinite; 
+}
+
+.step-card-blink img{
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+
 /*----------- CALIBRATION PAGE END -----------*/ 
+
+
+@-webkit-keyframes border-blink {    
+  from, to {    
+      border: 2px solid #6279B8;   
+      border-radius: 10px;   
+  }    
+  50% { 
+      border: 1px solid #8ed1dc; 
+  }    
+}    
+@keyframes border-blink {    
+  from, to {    
+      border: 2px solid #6279B8;  
+      border-radius: 10px;   
+  }    
+  50% {    
+      border: 1px solid #8ed1dc;  
+  }    
+}  
+
+
+
+
+
+
+.container{
+  margin: 50px auto 50px;
+  width: auto; 
+  height: 380px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubbles{
+  height: 140px;
+  background: #8ed1dc;
+}
+
+.bubbles img {
+  max-height: 96px;
+  max-width: 96px;
+}
+
+.photo{
+  position:absolute;
+  top: 87px; 
+  left: 45%;
+  border: 5px solid white;
+  border-radius: 50%;
+  height: 96px;
+  overflow: hidden;
+}
+
+.maindiv{
+  height: 150px;
+  background-color: white;
+  text-align: center;
+  padding-top: 75px;
+  box-sizing: border-box;
+}
+
+.name{
+  font-weight: 700;
+  font-size: 1.3em;
+  color: var(--Verydarkdesaturatedblue);
+}
+
+.statscontainer{
+  background-color: white;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid hsl(0, 0%, 90%);
+  margin-top: 30px;
+}
+
+.statistics {
+ text-align: center;
+}
+
+.quantity {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: var(--Verydarkdesaturatedblue);
+}
+
+.units {
+  font-weight: 400;
+  font-size: 0.8em;
+  color: var(--Darkgray);
+  letter-spacing: 2px;
+}
+
+

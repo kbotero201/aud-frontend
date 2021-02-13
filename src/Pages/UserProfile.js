@@ -33,16 +33,26 @@ function UserProfile({currentUser, reloadCurrentUser}){
 
     return(
         <div>
-            <div className="full-width">
-                <div className="full-width1"> <img src="../Images/user.png" alt="User Image" /> </div>
-                <div className="full-width2">
-                    <h1> {currentUser.name}  </h1>
-                    <h2> Age: {currentUser.age}  </h2>
+            <div className="container">
+                <div className="bubbles"></div>
+                <div className="photo"> 
+                    <img src="../Images/profile.png" alt="User Image" /> 
+                </div>
+                <div className="maindiv">
+                    <span className="name"> {currentUser.name} </span>
+                    <div className="statscontainer">
+                        <div className="statistics">
+                            <div className="quantity"> {currentUser.age} </div>
+                            <div className="units"> Age </div>
+                        </div>
+                        <div className="statistics">
+                            <div className="quantity"> 20 </div>
+                            <div className="units"> Tests </div>
+                        </div>     
+                    </div>
                 </div>
             </div>
-           
-            {testMapped}
-            
+            {testMapped} 
         </div>
     )
 }

@@ -37,7 +37,7 @@ function Equipment({setStartStep}){
     return(
         <div>
 
-            <h1 className="header">Let's make sure you have the right equipment</h1>
+            <h1 className="header"> Let's Make Sure You Have The Right Equipment</h1>
             <div className="equipment-flex" >
                 {equipmentList}
             </div>
