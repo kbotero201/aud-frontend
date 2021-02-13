@@ -7,10 +7,6 @@ function Calibration({setStartStep}){
     const [cantHear, setCantHear] = useState(false)
     const audio = new Audio("../Sounds/calibrated.ogg")
 
-    function handleNextClick(){
-        setStartStep(2)
-    }
-
     function playSound(){
         audio.play()
         setIsPlaying(true)
@@ -44,11 +40,10 @@ function Calibration({setStartStep}){
                 </div>
             </div>
 
-            
 
             <div className="flex-container">
                 <button className="alt-large-button" onClick={handleCantHearClick}> I don't hear my hands rubbing </button>
-                <Link to={"./test"}> <button className="large-button" onClick={handleNextClick}> Start the test </button> </Link>
+                <Link to={"./test"}> <button className="large-button" > Start the test </button> </Link>
             </div>
             
             {cantHear? 

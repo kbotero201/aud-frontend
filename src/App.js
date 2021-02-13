@@ -15,6 +15,7 @@ import StartTest from "./Pages/StartTest/Main.js"
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null)
+  const [tags, setTags] = useState(["Used Airpods", "Loud concert today"])
 
 
   function reloadCurrentUser(currentUser) {
@@ -50,7 +51,7 @@ function App() {
     <div className="Main">
         <Switch>
           <Route exact path="/">
-              <StartTest currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/>
+              <StartTest currentUser={currentUser} reloadCurrentUser={reloadCurrentUser} tags={tags} setTags={setTags}/>
           </Route>
 
           <Route exact path="/test">
