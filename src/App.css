@@ -364,6 +364,12 @@ html, body {
   justify-content: center;
 }
 
+.flex-container a{
+  text-decoration: none;
+  color: #49516F;
+  margin-right: 15px;
+}
+
 /*----------- LOGIN BUTTONS END -----------*/ 
 
 

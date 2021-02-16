@@ -25,19 +25,16 @@ function LoginButtons({currentUser, setCurrentUser}) {
 
     return (
         <div className="flex-container">
-          <div>
+          
             {currentUser ? 
-              <Link to={"./"}> <button onClick={handleLogout}> Logout </button> </Link> : 
+              <div><Link to={"./"} onClick={handleLogout}> Logout</Link></div> : 
               <React.Fragment> 
-                <Link to={"./"}> <button onClick={handleLogin}> Demo </button> </Link>
-                <Link to={"./login"}> <button > Login </button> </Link>
+                <div><Link to={"./"} onClick={handleLogin}> Demo </Link></div>
+                <div><Link to={"./login"}> Login </Link></div>
+                <div><Link to={"./sign-up"}> Signup </Link></div>
               </React.Fragment> 
             }
-          </div>
-          <div>
-            {currentUser ?  null : <Link to={"./sign-up"}><button > Sign Up </button></Link> }
-
-          </div>
+  
         </div>
     )
   }

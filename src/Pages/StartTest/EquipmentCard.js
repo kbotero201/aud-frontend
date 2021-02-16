@@ -3,22 +3,21 @@ import React, {useState} from 'react'
 function EquipmentCard({data: {title, suggestion, image, moreList}, setEquipment}){
 
     const [showMore, setShowMore] = useState(false)
-    const [isSelected, setIsSelected] = useState(false)
+    //const [isSelected, setIsSelected] = useState(false)
 
     function handleCardClick(){
         setShowMore((showMore) => !showMore)
     }
 
     function handleSelectedClick(){
-        setEquipment(title)
-        setIsSelected(true)
+        setEquipment("Using " + title)
+        //setIsSelected(true)
     }
 
     const listItems = moreList.map((item) => (
         <li key={item}> {item} </li>
     ))
 
-    console.log(moreList)
     
     return(
         <div>

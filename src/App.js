@@ -15,7 +15,7 @@ import StartTest from "./Pages/StartTest/Main.js"
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null)
-  const [equipment, setEquipment] = useState("test equip")
+  const [equipment, setEquipment] = useState("Audio type used")
   const [tags, setTags] = useState(null)
 
   useEffect(()=> {
@@ -88,7 +88,7 @@ function App() {
       </div>
 
       <div className="Footer">
-        <small>Made by Kevin Botero</small>
+        <small> Made by Kevin Botero </small>
       </div>
 
       </div>

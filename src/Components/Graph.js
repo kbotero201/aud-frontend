@@ -76,7 +76,7 @@ import Chart from "chart.js";
         <div>
             { resultText }
             <canvas id="myChart" width="50" height="50" />
-            <button id='link' download='filename.png'> Save as Image </button>
+            {/*<button id='link' download='filename.png'> Save as Image </button>*/}
 
 
         </div>

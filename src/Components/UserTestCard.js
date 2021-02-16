@@ -46,8 +46,8 @@ function UserTestCard({test, handleDeletedTest}){
                     {showGraph? 
                         <React.Fragment>
                             <div>
-                                <button><a href="mailto: ?subject=Please Take a Look At My Audiogram.&body=Here is my Hearing Test Audiogram I took on Audzi. Would you please take a look?"> Email My Result </a></button>
-                                <button id='link' download='filename.png'> Download </button>
+                                <button className='alt-large-button'><a href="mailto: ?subject=Please Take a Look At My Audiogram.&body=Here is my Hearing Test Audiogram I took on Audzi. Would you please take a look?"> Email My Result </a></button>
+                                <button className='alt-large-button' id='link' download='filename.png'> Download </button>
                             </div>
                             <div onClick={handleGraphClick}> 
                             <div>
