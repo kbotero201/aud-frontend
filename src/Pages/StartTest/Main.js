@@ -7,6 +7,10 @@ function StartTest({tags, setTags, setEquipment}){
 
     const [startStep, setStartStep] = useState(1)
 
+    useEffect(()=> {
+        setTags(["Audio type used", "Loud concert today"])
+    },[])
+
     function displayStep(){
         if (startStep === 1){
             return <Equipment setStartStep={setStartStep} setEquipment={setEquipment} />

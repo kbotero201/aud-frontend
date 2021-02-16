@@ -26,7 +26,7 @@ function Search({setLocationSearch}){
                     value = {search}
                     onChange = {(evt) => setSearch(evt.target.value)} >
                 </input>
-                <button type = 'submit'> Search </button>
+                <button className="search-button" type ="submit"> <img src="./Images/search-icon.png" alt="Search" /> </button>
             </form>
         </div>
     )

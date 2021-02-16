@@ -243,10 +243,11 @@ button {
  .div2 {
   /*border: 2px solid red; */
   width: 50px;
-  background: red;
+  background: #6279B8;
   margin-left: 4%;
   justify-content: center;
   vertical-align: middle;
+  border-radius: 12px;
 }
 
 .div2 img {
@@ -284,7 +285,7 @@ progress {
   background-color: #8ed1dc; 
   border: none;
   color: white;
-  padding: 20px 20px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -301,7 +302,7 @@ progress {
 .soundbuttonblink {
   background-color: #8ed1dc; 
   color: white;
-  padding: 20px 20px;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -428,6 +429,19 @@ html, body {
 .search {
   margin-top: 40px;
   margin-bottom: 70px;
+}
+
+.search-button {
+  background-color: #8ed1dc;
+  border: 1px solid #8ed1dc;
+  border-radius: 12px;
+  cursor: pointer;
+  height:35px;
+  width:35px;
+}
+
+.search-button img{
+  max-width: 75%;
 }
 
 /*----------- AUDIOLOGIST CARD END -----------*/ 

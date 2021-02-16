@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Graph from "../Components/Graph.js"
 import { Link } from "react-router-dom"
 
@@ -41,8 +41,8 @@ import { Link } from "react-router-dom"
             <Graph finalTestValues={finalTestValues} />
         </div>
         <div>
-            {currentUser? <Link to= {"/profile"}> <button onClick={handleSaveClick}> Save </button> </Link> : 
-                          <Link to= {"/sign-up"}> <button> Sign up to save your test! </button> </Link>
+            {currentUser? <Link to= {"/profile"}> <button onClick={handleSaveClick} className="large-button"> Save </button> </Link> : 
+                          <Link to= {"/sign-up"}> <button className="large-button"> Sign up to save your test! </button> </Link>
             }
         </div>
       </div>

@@ -2,7 +2,6 @@ import './App.css'
 import React, {useState, useEffect} from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Test from "./TestComponents/Test.js"
-import Graph from "./Components/Graph.js"
 import UserProfile from "./Pages/UserProfile.js"
 import LoginButtons from "./Components/LoginButtons.js"
 import SignUp from "./Pages/SignUp.js"

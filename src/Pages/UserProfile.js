@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import UserTestCard from "../Components/UserTestCard.js"
-import { Link } from "react-router-dom"
 
 
 function UserProfile({currentUser, reloadCurrentUser}){
@@ -34,7 +33,7 @@ function UserProfile({currentUser, reloadCurrentUser}){
             <div className="container">
                 <div className="bubbles"></div>
                 <div className="photo"> 
-                    <img src="../Images/profile.png" alt="User Image" /> 
+                    <img src="../Images/profile.png" alt="User" /> 
                 </div>
                 <div className="maindiv">
                     <span className="name"> {currentUser.name} </span>

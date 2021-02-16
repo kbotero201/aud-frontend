@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import EquipmentCard from "./EquipmentCard.js"
 
 function Equipment({setStartStep, setEquipment}){
