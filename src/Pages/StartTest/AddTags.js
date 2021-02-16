@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 function AddTags({setStartStep, tags, setTags}){
 
-    const [value, setValue] = useState(null)
+    const [value, setValue] = useState("")
 
     function inputKeyDown(e){
         const val = e.target.value;
@@ -13,13 +13,13 @@ function AddTags({setStartStep, tags, setTags}){
         }
     }
 
-    const displayTags = tags.map((tag, i) => (
-        <li key={tag}> {tag} <button onClick={removeTag} type="button"> X </button></li> 
+    const displayTags = tags.map((tag) => (
+        <li key={tag}> {tag} <button id={tag} onClick={removeTag} type="button"> X </button></li> 
     ))
 
-    function removeTag(i){
-        const newTags = [ ...tags ]
-        newTags.splice(i, 1)
+    function removeTag(evt){
+        const oldTags = [ ...tags ]
+        const newTags = oldTags.filter((tag) => tag !== evt.target.id)
         setTags(newTags)
     }
 
