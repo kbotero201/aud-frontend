@@ -9,7 +9,7 @@ function TestStepContainer({sounds, setStepValue}){
 
     return(
         <div className="soundsdiv">
-            <tr>
+            <tr className="center">
                 {soundsMapped}
             </tr> 
         </div>    

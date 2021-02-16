@@ -8,19 +8,19 @@ function Equipment({setStartStep, setEquipment}){
             title: "Over Ear Headphones",
             suggestion: "(reccomended)",
             image: "./Images/test.jpg",
-            moreList: ["Bluetooth", "Wired"]
+            moreList: ["✔️ Bluetooth", "✔️ Wired"]
         },
         {
             title: "Bud Earphones",
             suggestion: "(acceptable)",
             image: "./Images/test.jpg",
-            moreList: ["Bluetooth", "Wired"]
+            moreList: ["✔️ Bluetooth", "✔️ Wired"]
         },
         {
             title: "Computer Audio",
             suggestion: "(not suggested)",
             image: "./Images/test.jpg",
-            moreList: ["External Audio", "Computer Audio"]
+            moreList: ["❌ External Audio", "❌ Computer Audio"]
         }
     ]
 

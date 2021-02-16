@@ -40,15 +40,12 @@ function App() {
       <div className="Bar">
         {currentUser? <small> Welcome, {currentUser.name} </small> : <small> No current user </small>}
       </div>
-
       <div className="Logo">
         <p>Logo</p>
       </div>
-
       <div className="Navbar">
         <NavButtons currentUser={currentUser} />
       </div>
-
       <div className="Login">
       <LoginButtons currentUser={currentUser} setCurrentUser={setCurrentUser} />
       </div>

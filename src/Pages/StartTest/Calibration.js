@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom"
 
-function Calibration({setStartStep}){
+function Calibration(){
 
     const [isPlaying, setIsPlaying] = useState(false)
     const [cantHear, setCantHear] = useState(false)

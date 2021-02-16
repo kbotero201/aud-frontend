@@ -22,11 +22,11 @@ function EquipmentCard({data: {title, suggestion, image, moreList}, setEquipment
     return(
         <div>
                 <div onClick={handleSelectedClick} className="equipment-item" >
-                    <img src={image} className={title}></img>
+                    <img src={image} alt={title}></img>
                     <h3>{title}</h3>
                     <p>{suggestion}</p>
                     <div onClick={handleCardClick}> <img className="icon" src={showMore? "./Images/arrow-up.png" : "./Images/arrow-down.png"} alt="Arrow" /> </div>
-                    {showMore? <ul>{listItems}</ul> : null}
+                    {showMore? <ul className="list" >{listItems}</ul> : null}
                 </div>
         </div>
     )
