@@ -55,7 +55,7 @@ function App() {
           </Route>
 
           <Route exact path="/test">
-              <Test currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/>
+              <Test currentUser={currentUser} reloadCurrentUser={reloadCurrentUser} tags={tags}/>
           </Route>
 
           <Route exact path="/Audiologists">

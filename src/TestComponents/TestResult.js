@@ -1,11 +1,9 @@
 import React, { useEffect } from "react"
-import Chart from "chart.js";
 import Graph from "../Components/Graph.js"
 import { Link } from "react-router-dom"
 
 
-
- function TestResult ({finalTestValues, currentUser, reloadCurrentUser}) {
+ function TestResult ({finalTestValues, currentUser, reloadCurrentUser, tags}) {
 
 
     function handleSaveClick(){
@@ -18,6 +16,7 @@ import { Link } from "react-router-dom"
             test_id: 1,
             result_both: finalTestValues, 
             date: date,
+            notes: tags,
           }
 
 
@@ -29,8 +28,8 @@ import { Link } from "react-router-dom"
         body: JSON.stringify(newUserTest)
         })
             .then(resp => resp.json())
-            .then(
-                //console.log(data)
+            .then(data =>
+                console.log(data),
                 reloadCurrentUser(currentUser)
             )
     }

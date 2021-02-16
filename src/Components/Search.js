@@ -16,7 +16,7 @@ function Search({setLocationSearch}){
                     htmlFor = 'location'
                     arialabel = 'enter address, neighbourhood, city, province or postal code'
                     className = 'searchForm__label'> 
-                    <span className="name"> I am looking for an Audiologists near </span>
+                    <span className="name"> I am looking for an Audiologist near </span>
                 </label>
                 <input 
                     className="search-input"

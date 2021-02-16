@@ -24,6 +24,16 @@ function UserTestCard({test, handleDeletedTest}){
                 )
     }
 
+
+    const testNotes = JSON.parse(test.notes)
+    let displayTags
+    if (test.notes){
+        displayTags = testNotes.map((tag) => (
+            <li key={tag}> {tag} </li> 
+        ))
+    }
+
+
     return(
         <div>
 
@@ -40,7 +50,14 @@ function UserTestCard({test, handleDeletedTest}){
                                 <button><a href="mailto: ?subject=Please Take a Look At My Audiogram.&body=Here is my Hearing Test Audiogram I took on Audzi. Would you please take a look?"> Email My Result </a></button>
                                 <button id='link' download='filename.png'> Download </button>
                             </div>
-                            <div onClick={handleGraphClick}> <Graph finalTestValues={test.result_both} /> </div>
+                            <div onClick={handleGraphClick}> 
+                            <div>
+                                <ul className="input-tag__tags">
+                                    {displayTags}   
+                                </ul>
+                            </div>
+                                <Graph finalTestValues={test.result_both} /> 
+                            </div>
                         </React.Fragment> 
                         : null
                     }

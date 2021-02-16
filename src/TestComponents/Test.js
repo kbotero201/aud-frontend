@@ -3,7 +3,7 @@ import TestStepContainer from './TestStepContainer.js'
 import ProgressBar from "../Components/ProgressBar.js"
 import TestResult from "./TestResult.js"
 
-function Test({currentUser, reloadCurrentUser}){
+function Test({currentUser, reloadCurrentUser, tags}){
 
     const [currentTest, setCurrentTest] = useState([])
     const [currentStep, setCurrentStep] = useState(1)
@@ -59,7 +59,7 @@ function Test({currentUser, reloadCurrentUser}){
         <div > 
             
             {
-                showResults? <TestResult finalTestValues={finalTestValues} currentUser={currentUser} reloadCurrentUser={reloadCurrentUser}/> : 
+                showResults? <TestResult finalTestValues={finalTestValues} currentUser={currentUser} reloadCurrentUser={reloadCurrentUser} tags={tags}/> : 
 
                 <div>
                     <ProgressBar currentStep={currentStep}/>

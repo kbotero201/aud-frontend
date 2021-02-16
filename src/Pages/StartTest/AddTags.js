@@ -5,7 +5,7 @@ function AddTags({setStartStep, tags, setTags}){
     const [value, setValue] = useState("")
 
     function inputKeyDown(e){
-        const val = e.target.value;
+        const val = e.target.value
         if (e.key === 'Enter' && val) {
             setTags([...tags, val])
             setValue("")
@@ -17,9 +17,9 @@ function AddTags({setStartStep, tags, setTags}){
         <li key={tag}> {tag} <button id={tag} onClick={removeTag} type="button"> X </button></li> 
     ))
 
-    function removeTag(evt){
+    function removeTag(e){
         const oldTags = [ ...tags ]
-        const newTags = oldTags.filter((tag) => tag !== evt.target.id)
+        const newTags = oldTags.filter((tag) => tag !== e.target.id)
         setTags(newTags)
     }
 
