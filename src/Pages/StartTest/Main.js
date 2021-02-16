@@ -3,15 +3,15 @@ import Equipment from "./Equipment.js"
 import Calibration from "./Calibration.js"
 import AddTags from "./AddTags.js"
 
-function StartTest({tags, setTags}){
+function StartTest({tags, setTags, setEquipment}){
 
     const [startStep, setStartStep] = useState(1)
 
     function displayStep(){
         if (startStep === 1){
-            return <Equipment setStartStep={setStartStep} />
+            return <Equipment setStartStep={setStartStep} setEquipment={setEquipment} />
         } else if (startStep === 2){
-            return <AddTags setStartStep={setStartStep} tags={tags} setTags={setTags}/>
+            return <AddTags setStartStep={setStartStep} tags={tags} setTags={setTags} />
         } else if (startStep === 3){
             return  <Calibration setStartStep={setStartStep} />
         } 

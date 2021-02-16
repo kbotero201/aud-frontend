@@ -15,7 +15,13 @@ import StartTest from "./Pages/StartTest/Main.js"
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null)
-  const [tags, setTags] = useState(["Used Airpods", "Loud concert today"])
+  const [equipment, setEquipment] = useState("test equip")
+  const [tags, setTags] = useState(null)
+
+  useEffect(()=> {
+    setTags([equipment, "Loud concert today"])
+  },[equipment])
+
 
 
   function reloadCurrentUser(currentUser) {
@@ -51,7 +57,7 @@ function App() {
     <div className="Main">
         <Switch>
           <Route exact path="/">
-              <StartTest currentUser={currentUser} reloadCurrentUser={reloadCurrentUser} tags={tags} setTags={setTags}/>
+              <StartTest currentUser={currentUser} reloadCurrentUser={reloadCurrentUser} tags={tags} setTags={setTags} setEquipment={setEquipment}/>
           </Route>
 
           <Route exact path="/test">

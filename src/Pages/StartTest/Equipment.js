@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import EquipmentCard from "./EquipmentCard.js"
 
-function Equipment({setStartStep}){
+function Equipment({setStartStep, setEquipment}){
 
     const equipmentData = [
         {
@@ -25,7 +25,7 @@ function Equipment({setStartStep}){
     ]
 
     const equipmentList = equipmentData.map((card) => (
-        <EquipmentCard data={card} />
+        <EquipmentCard data={card} setEquipment={setEquipment} />
     ))
 
 
