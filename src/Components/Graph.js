@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "chart.js";
-
 
  function Graph({finalTestValues}) {
 
-    
+    const [url, setUrl] = useState("")
+
     const max = Math.max(...finalTestValues)
-    let resultText 
+    let resultText = "hello"
     if (max < 20){
         resultText= <h3> <img className="icon" src="../Images/tick.png" alt="Checkmark" /> Great Job! Your hearing is within normal range. </h3>
     } else {
@@ -14,12 +14,11 @@ import Chart from "chart.js";
     }
 
 
-
     useEffect(() => {
 
       const ctx = document.getElementById("myChart").getContext('2d')
       const xlabels = [null, finalTestValues[0],finalTestValues[1],finalTestValues[2],finalTestValues[3],finalTestValues[4],finalTestValues[5]]
-      new Chart(ctx, {
+        let chart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: ['', '250 Hz', '500 Hz', '1,000 Hz', '2,000 Hz', '4,000 Hz', '8,000 Hz', ''],
@@ -63,11 +62,15 @@ import Chart from "chart.js";
                 }]
             },
             animation: {
-                onComplete: "hello" }
+                onComplete : () => {
+                    const url_base64 = chart.toBase64Image()
+                    setUrl(url_base64)
+                  } 
+            }
         }
     })
    
-    })
+    },[])
 
 
 
@@ -76,9 +79,10 @@ import Chart from "chart.js";
         <div>
             { resultText }
             <canvas id="myChart" width="50" height="50" />
-            {/*<button id='link' download='filename.png'> Save as Image </button>*/}
-
-
+            <div>
+                <a href="mailto: ?subject=Please Take a Look At My Audiogram.&body=Here is my Hearing Test Audiogram I took on Audzi. Would you please take a look?"> <button className='alt-large-button'> Email My Result </button> </a>
+                <a href={url} download='Audiogram.png'> <button className='alt-large-button' id='link' download='filename.png'> Download </button> </a>
+            </div>
         </div>
       </div>
     )

@@ -158,12 +158,12 @@ button {
   position: relative;
 }
 
-.bubbles{
+.solid{
   height: 140px;
   background: #8ed1dc;
 }
 
-.bubbles img {
+.solid img {
   max-height: 96px;
   max-width: 96px;
 }
@@ -213,7 +213,7 @@ button {
   color: var(--Verydarkdesaturatedblue);
 }
 
-.units {
+.label {
   font-weight: 400;
   font-size: 0.8em;
   color: var(--Darkgray);

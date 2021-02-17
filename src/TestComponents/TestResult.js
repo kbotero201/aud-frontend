@@ -19,6 +19,9 @@ import { Link } from "react-router-dom"
             notes: tags,
           }
 
+          //{currentUser? <Link to= {"/profile"}> <button onClick={handleSaveClick} className="large-button"> Save </button> </Link> : 
+
+
 
         fetch("http://127.0.0.1:3000/api/v1/user_tests", {
         method: "POST",
@@ -41,7 +44,7 @@ import { Link } from "react-router-dom"
             <Graph finalTestValues={finalTestValues} />
         </div>
         <div>
-            {currentUser? <Link to= {"/profile"}> <button onClick={handleSaveClick} className="large-button"> Save </button> </Link> : 
+            {currentUser? <button onClick={handleSaveClick} className="large-button"> Save </button> : 
                           <Link to= {"/sign-up"}> <button className="large-button"> Sign up to save your test! </button> </Link>
             }
         </div>
