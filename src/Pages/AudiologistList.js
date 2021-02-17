@@ -11,6 +11,10 @@ function AudiologistList(){
     const [locationSearch, setLocationSearch] = useState("")
     const [isLoading, setIsLoading] = useState(false)
 
+    const listMapped = list.map((audiologist) => (
+        <AudiologistCard audiologist={audiologist} key={audiologist.id} />
+    ))
+
     useEffect(()=> {
         const initialLocation = "New York"
         fetchAudiologists(initialLocation)
@@ -31,18 +35,10 @@ function AudiologistList(){
             }
             })
             .then((res) => {
-                //console.log(res.data.businesses)
-                //at the same time, setting the loading state to false 
                 setList(res.data.businesses)
                 setIsLoading(false)
             })
     }
-
-
-    const listMapped = list.map((audiologist) => (
-        <AudiologistCard audiologist={audiologist} key={audiologist.id} />
-    ))
-
 
     return(
         <div>

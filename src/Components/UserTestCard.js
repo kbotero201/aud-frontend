@@ -33,8 +33,6 @@ function UserTestCard({test, handleDeletedTest}){
         ))
     }
 
-    console.log(showGraph)
-    
     return(
         <div>
 
@@ -44,6 +42,7 @@ function UserTestCard({test, handleDeletedTest}){
                         <h3>{test.date}</h3>
                         <p>Test #{test.id}</p>
                     </div>
+
                     {showGraph? 
                         <React.Fragment>
                             <div onClick={handleGraphClick}> 
@@ -57,6 +56,7 @@ function UserTestCard({test, handleDeletedTest}){
                         </React.Fragment> 
                         : null
                     }
+                    
                 </div>
                 <div className="div2" onClick={handleDeleteClick}>
                     <img src="./Images/trash.png" alt="Trash Icon" />

@@ -9,7 +9,6 @@ import Login from "./Pages/Login.js"
 import NavButtons from "./Components/NavButtons.js"
 import AudiologistList from "./Pages/AudiologistList.js"
 import StartTest from "./Pages/StartTest/Main.js"
-import SampleChart from "./Components/SampleChart.js"
 
 
 function App() {
@@ -73,10 +72,6 @@ function App() {
 
           <Route exact path="/sign-up">
             <SignUp />
-          </Route>
-
-          <Route exact path="/sample">
-            <SampleChart />
           </Route>
 
           <Route path="*">

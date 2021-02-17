@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 
  function TestResult ({finalTestValues, currentUser, reloadCurrentUser, tags}) {
 
-
     function handleSaveClick(){
 
         const myCurrentDate = new Date()
@@ -19,10 +18,6 @@ import { Link } from "react-router-dom"
             notes: tags,
           }
 
-          //{currentUser? <Link to= {"/profile"}> <button onClick={handleSaveClick} className="large-button"> Save </button> </Link> : 
-
-
-
         fetch("http://127.0.0.1:3000/api/v1/user_tests", {
         method: "POST",
         headers: {
@@ -31,8 +26,7 @@ import { Link } from "react-router-dom"
         body: JSON.stringify(newUserTest)
         })
             .then(resp => resp.json())
-            .then(data =>
-                console.log(data),
+            .then(() =>
                 reloadCurrentUser(currentUser)
             )
     }
@@ -44,13 +38,12 @@ import { Link } from "react-router-dom"
             <Graph finalTestValues={finalTestValues} />
         </div>
         <div>
-            {currentUser? <button onClick={handleSaveClick} className="large-button"> Save </button> : 
+            {currentUser? <Link to= {"/profile"}> <button onClick={handleSaveClick} className="large-button"> Save </button> </Link> : 
                           <Link to= {"/sign-up"}> <button className="large-button"> Sign up to save your test! </button> </Link>
             }
         </div>
       </div>
     )
-
 
   }
 

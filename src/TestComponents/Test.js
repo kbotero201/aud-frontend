@@ -56,7 +56,7 @@ function Test({currentUser, reloadCurrentUser, tags}){
     }
 
     return(
-        <div > 
+        <div> 
             
             {
                 showResults? <TestResult finalTestValues={finalTestValues} currentUser={currentUser} reloadCurrentUser={reloadCurrentUser} tags={tags}/> : 

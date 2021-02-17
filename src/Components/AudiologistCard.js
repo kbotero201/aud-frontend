@@ -8,7 +8,6 @@ function AudiologistCard({audiologist: {image_url, location, name, display_phone
 
     function handleCardClick(){
         window.open(url)
-        console.log(url)
     }
 
     return ( 
@@ -28,9 +27,7 @@ function AudiologistCard({audiologist: {image_url, location, name, display_phone
                 <div>
                     <a href={formattedLocation}>Get Directions</a>
                 </div>
-                
             </div>
-
         </div>
     )
 }

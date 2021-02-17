@@ -57,7 +57,6 @@ import Chart from "chart.js";
                         max: 90,
                         stepSize: 10,
                         reverse: true,
-                        //beginAtZero: true
                     }
                 }]
             },
@@ -69,9 +68,7 @@ import Chart from "chart.js";
             }
         }
     })
-   
     },[])
-
 
 
     return (
@@ -86,7 +83,6 @@ import Chart from "chart.js";
         </div>
       </div>
     )
-
 
   }
 

@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 function EquipmentCard({data: {title, suggestion, image, moreList}, setEquipment}){
 
     const [showMore, setShowMore] = useState(false)
-    //const [isSelected, setIsSelected] = useState(false)
 
     function handleCardClick(){
         setShowMore((showMore) => !showMore)
@@ -11,14 +10,12 @@ function EquipmentCard({data: {title, suggestion, image, moreList}, setEquipment
 
     function handleSelectedClick(){
         setEquipment("Using " + title)
-        //setIsSelected(true)
     }
 
     const listItems = moreList.map((item) => (
         <li key={item}> {item} </li>
     ))
 
-    
     return(
         <div>
                 <div onClick={handleSelectedClick} className="equipment-item" >

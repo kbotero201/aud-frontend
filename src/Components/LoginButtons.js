@@ -3,13 +3,6 @@ import { Link } from "react-router-dom"
 
 function LoginButtons({currentUser, setCurrentUser}) {
 
-    // auto-login
-    //useEffect(() => {
-    //  fetch("http://localhost:3000/api/v1/users/1")
-    //    .then((r) => r.json())
-    //    .then(r => setCurrentUser(r));
-    //}, [])
-  
     // manual login
     function handleLogin() {
       fetch("http://localhost:3000/autologin")
