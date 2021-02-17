@@ -38,10 +38,10 @@ function App() {
       <div className="grid-container">
       
       <div className="Bar">
-        {currentUser? <small> Welcome, {currentUser.name} </small> : <small> No current user </small>}
+        {currentUser? <small> Welcome, {currentUser.name} </small> : <small> Create an account to track your hearing! </small>}
       </div>
       <div className="Logo">
-        <p>Logo</p>
+        <img src="./Images/audzi-logo.png" alt="logo"></img>
       </div>
       <div className="Navbar">
         <NavButtons currentUser={currentUser} />
