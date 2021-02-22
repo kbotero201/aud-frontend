@@ -21,6 +21,12 @@ button {
   margin-bottom: 50px;
 }
 
+.icon {
+  max-width: 25px;
+  margin-right: 10px;
+}
+
+
 /* FOR TEST */
 .large-button {
   background-color:#49516F;
@@ -323,6 +329,28 @@ progress {
   height: 30px;  
 }
 
+/* SOUND BUTTON BLINKING*/
+
+@-webkit-keyframes border-blink {    
+  from, to {    
+      border: 2px solid #6279B8;   
+      border-radius: 10px;   
+  }    
+  50% { 
+      border: 1px solid #8ed1dc; 
+  }    
+}    
+@keyframes border-blink {    
+  from, to {    
+      border: 2px solid #6279B8;  
+      border-radius: 10px;   
+  }    
+  50% {    
+      border: 1px solid #8ed1dc;  
+  }    
+}  
+
+
 /*----------- TEST PAGE END -----------*/ 
 
 
@@ -554,42 +582,7 @@ progress {
 /*----------- CALIBRATION PAGE END -----------*/ 
 
 
-@-webkit-keyframes border-blink {    
-  from, to {    
-      border: 2px solid #6279B8;   
-      border-radius: 10px;   
-  }    
-  50% { 
-      border: 1px solid #8ed1dc; 
-  }    
-}    
-@keyframes border-blink {    
-  from, to {    
-      border: 2px solid #6279B8;  
-      border-radius: 10px;   
-  }    
-  50% {    
-      border: 1px solid #8ed1dc;  
-  }    
-}  
-
-
-
-
-
-
-
-
-
-.icon {
-  max-width: 25px;
-  margin-right: 10px;
-}
-
-
-
-
-
+/*----------- ADD TAGS PAGE -----------*/ 
 
 
 .input-tag {
@@ -657,6 +650,8 @@ progress {
 .input-tag__tags li.input-tag__tags__input:focus {
   outline: none;
 }
+
+/*----------- ADD TAGS PAGE END -----------*/ 
 
 
 
